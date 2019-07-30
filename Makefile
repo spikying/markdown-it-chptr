@@ -28,12 +28,12 @@ browserify:
 	mkdir dist
 	# Browserify
 	( printf "/*! ${NPM_PACKAGE} ${NPM_VERSION} ${GITHUB_PROJ} @license MIT */" ; \
-		./node_modules/.bin/browserify ./ -s markdownitSup \
-		) > dist/markdown-it-sup.js
+		./node_modules/.bin/browserify ./ -s markdownitChptr \
+		) > dist/markdown-it-chptr.js
 	# Minify
-	./node_modules/.bin/uglifyjs dist/markdown-it-sup.js -b beautify=false,ascii-only=true -c -m \
+	./node_modules/.bin/uglifyjs dist/markdown-it-chptr.js -b beautify=false,ascii-only=true -c -m \
 		--preamble "/*! ${NPM_PACKAGE} ${NPM_VERSION} ${GITHUB_PROJ} @license MIT */" \
-		> dist/markdown-it-sup.min.js
+		> dist/markdown-it-chptr.min.js
 
 .PHONY: lint test coverage
 .SILENT: lint test

@@ -1,14 +1,13 @@
 {
-  "name": "markdown-it-sup",
-  "main": "dist/markdown-it-sup.js",
-  "homepage": "https://github.com/markdown-it/markdown-it-sup",
-  "description": "<sup> tag for markdown-it markdown parser.",
+  "name": "markdown-it-chptr",
+  "main": "dist/markdown-it-chptr.js",
+  "homepage": "https://github.com/spikying/markdown-it-chptr",
+  "description": "A Markdown-It plugin that enhances Chptr-related markup",
   "keywords": [
     "markdown-it-plugin",
     "markdown-it",
     "markdown",
-    "superscript",
-    "sup"
+    "chptr"
   ],
   "license": "MIT",
   "ignore": [

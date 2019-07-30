@@ -1,16 +1,13 @@
-# markdown-it-sup
+# markdown-it-chptr
 
-[![Build Status](https://img.shields.io/travis/markdown-it/markdown-it-sup/master.svg?style=flat)](https://travis-ci.org/markdown-it/markdown-it-sup)
-[![NPM version](https://img.shields.io/npm/v/markdown-it-sup.svg?style=flat)](https://www.npmjs.org/package/markdown-it-sup)
-[![Coverage Status](https://img.shields.io/coveralls/markdown-it/markdown-it-sup/master.svg?style=flat)](https://coveralls.io/r/markdown-it/markdown-it-sup?branch=master)
+[![NPM version](https://img.shields.io/npm/v/markdown-it-chptr.svg?style=flat)](https://www.npmjs.org/package/markdown-it-chptr)
+[![Coverage Status](https://img.shields.io/coveralls/spikying/markdown-it-chptr/master.svg?style=flat)](https://coveralls.io/r/spikying/markdown-it-chptr?branch=master)
 
-> Superscript (`<sup>`) tag plugin for [markdown-it](https://github.com/markdown-it/markdown-it) markdown parser.
+> Chptr plugin for [markdown-it](https://github.com/markdown-it/markdown-it) markdown parser.  Formats {markup} and {key: markup} notations.
 
-__v1.+ requires `markdown-it` v4.+, see changelog.__
+`something {marked} with some {foo: bar baz}` => `something <span class='chptr-markup'>marked</span> with some <span class='chptr-markup'><span class='chptr-key'>foo</span>bar baz</span>`
 
-`29^th^` => `29<sup>th</sup>`
-
-Markup is based on [pandoc](http://johnmacfarlane.net/pandoc/README.html#superscripts-and-subscripts) definition. But nested markup is currently not supported.
+Markup is based on [chptr](https://github.com/spikying/chptr) definitions.
 
 
 ## Install
@@ -18,23 +15,24 @@ Markup is based on [pandoc](http://johnmacfarlane.net/pandoc/README.html#supersc
 node.js, browser:
 
 ```bash
-npm install markdown-it-sup --save
-bower install markdown-it-sup --save
+npm install markdown-it-chptr
+bower install markdown-it-chptr --save
 ```
 
 ## Use
 
 ```js
 var md = require('markdown-it')()
-            .use(require('markdown-it-sup'));
+            .use(require('markdown-it-chptr'));
 
-md.render('29^th^') // => '<p>29<sup>th</sup></p>'
+md.render('something {marked} with some {foo: bar baz}') // => '<p>something <span class='chptr-markup'>marked</span> with some <span class='chptr-markup'><span class='chptr-key'>foo</span>bar baz</span></p>'
 ```
 
 _Differences in browser._ If you load script directly into the page, without
-package system, module will add itself globally as `window.markdownitSup`.
+package system, module will add itself globally as `window.markdownitChptr`.
 
 
 ## License
 
-[MIT](https://github.com/markdown-it/markdown-it-sup/blob/master/LICENSE)
+Based on Markdown-it-sup
+[MIT](https://github.com/spikying/markdown-it-chptr/blob/master/LICENSE)

@@ -6,9 +6,9 @@ var generate = require('markdown-it-testgen');
 
 /*eslint-env mocha*/
 
-describe('markdown-it-sup', function () {
+describe('markdown-it-chptr', function () {
   var md = require('markdown-it')()
               .use(require('../'));
 
-  generate(path.join(__dirname, 'fixtures/sup.txt'), md);
+  generate(path.join(__dirname, 'fixtures/markup.txt'), md);
 });

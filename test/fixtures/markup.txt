@@ -1,0 +1,41 @@
+.
+{some key: some content value}
+.
+<p><span class='chptr-markup'><span class='chptr-key'>some key</span> some content value</span></p>
+.
+
+.
+{some markup}
+.
+<p><span class='chptr-markup'>some markup</span></p>
+.
+
+.
+{foo\}
+.
+<p>{foo}</p>
+.
+
+.
+{foo~bar}baz{bar~foo}
+.
+<p><span class='chptr-markup'>foo~bar</span>baz<span class='chptr-markup'>bar~foo</span></p>
+.
+
+.
+{\ foo\ }
+.
+<p><span class='chptr-markup'> foo </span></p>
+.
+
+.
+{foo\\\\\\\ bar}
+.
+<p><span class='chptr-markup'>foo\\\ bar</span></p>
+.
+
+.
+**{foo} bar**
+.
+<p><strong><span class='chptr-markup'>foo</span> bar</strong></p>
+.
