@@ -1,7 +1,7 @@
 .
 {some key: some content value}
 .
-<p><span class='chptr-markup'><span class='chptr-key'>some key</span> some content value</span></p>
+<p><span class='chptr-key'>some key</span><span class='chptr-value'> some content value</span></p>
 .
 
 .

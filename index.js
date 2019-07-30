@@ -59,21 +59,28 @@ function markup(state, silent) {
   state.pos = start + 1;
 
   // Earlier we checked !silent, but this implementation does not need it
-  token         = state.push('chptr_open', 'span class=\'chptr-markup\'', 1);
-  token.markup  = '{';
 
   if (keyContent) {
     token = state.push('chptr_key_open', 'span class=\'chptr-key\'', 1)    
     token = state.push('text', '', 0)
     token.content = keyContent.replace(UNESCAPE_RE, '$1');
     token = state.push('chptr_key_close', 'span', -1);
+    token = state.push('chptr_key_open', 'span class=\'chptr-value\'', 1)    
+  } else {
+    token         = state.push('chptr_open', 'span class=\'chptr-markup\'', 1);
+    token.markup  = '{';  
   }
 
   token         = state.push('text', '', 0);
   token.content = content.replace(UNESCAPE_RE, '$1');
 
-  token         = state.push('chptr_close', 'span', -1);
-  token.markup  = '}';
+  if (keyContent) {
+    token = state.push('chptr_key_close', 'span', -1);
+  } else {
+    token         = state.push('chptr_close', 'span', -1);
+    token.markup  = '}';  
+  }
+
 
   state.pos = state.posMax + 1;
   state.posMax = max;
