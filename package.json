@@ -25,7 +25,7 @@
   "devDependencies": {
     "browserify": "*",
     "coveralls": "^2.11.2",
-    "eslint": "0.10.2",
+    "eslint": "6.1.0",
     "eslint-plugin-nodeca": "^1.0.0",
     "istanbul": "*",
     "lodash": "*",
