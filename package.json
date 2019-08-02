@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-chptr",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A Markdown-It plugin that enhances Chptr-related markup",
   "keywords": [
     "markdown-it-plugin",
@@ -17,6 +17,11 @@
     "url": "https://github.com/spikying/markdown-it-chptr/issues"
   },
   "license": "MIT",
+  "author": {
+    "name": "Mathieu Leblanc",
+    "email": "spiky.ing@gmail.com"
+  },
+  "publisher": "spikying",
   "main": "index.js",
   "scripts": {
     "test": "make test",
